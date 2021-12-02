@@ -1,14 +1,15 @@
-import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
 import { Center, Container, HStack, Text } from "@chakra-ui/layout";
 import {
   Collapse,
   Flex,
-  IconButton,
   useColorModeValue,
   useDisclosure,
 } from "@chakra-ui/react";
+import Image from "next/image";
 import { ReactNode } from "react";
-import useMediaQuery from "../../lib/hooks/useMediaQuery";
+import useMediaQuery from "../../../lib/hooks/useMediaQuery";
+import closeIcon from "../Icons/close.svg";
+import hamburgerIcon from "../Icons/hamburger.svg";
 import { DesktopNav } from "./Nav/DesktopNav";
 import { MobileNav } from "./Nav/MobileNav";
 
@@ -22,15 +23,26 @@ export default function Header() {
   const { isOpen, onToggle } = useDisclosure();
   const isMinWidth992 = useMediaQuery("(min-width:992px)");
 
-  const hambergerRendered = (
-    <IconButton
-      onClick={onToggle}
-      icon={isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />}
-      variant={"ghost"}
-      aria-label={"Toggle Navigation"}
-    />
-  );
+  // const hambergerRendered = (
+  //   <IconButton
+  //     onClick={onToggle}
+  //     icon={isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />}
+  //     variant={"ghost"}
+  //     aria-label={"Toggle Navigation"}
+  //   />
+  // );
 
+  const hambergerRendered = (
+    <Center onClick={onToggle} width="50px">
+      {isOpen ? (
+        <div style={{ transform: "rotate(45deg)" }}>
+          <Image src={closeIcon} width="50px" height="50px" color="#081420" />
+        </div>
+      ) : (
+        <Image src={hamburgerIcon} width="33px" height="26px" color="#081420" />
+      )}
+    </Center>
+  );
   if (!isMinWidth992) {
     return (
       <MobileHeaderContainer isOpen={isOpen}>
