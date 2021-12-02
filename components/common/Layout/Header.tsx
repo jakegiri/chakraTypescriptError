@@ -23,15 +23,6 @@ export default function Header() {
   const { isOpen, onToggle } = useDisclosure();
   const isMinWidth992 = useMediaQuery("(min-width:992px)");
 
-  // const hambergerRendered = (
-  //   <IconButton
-  //     onClick={onToggle}
-  //     icon={isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />}
-  //     variant={"ghost"}
-  //     aria-label={"Toggle Navigation"}
-  //   />
-  // );
-
   const hambergerRendered = (
     <Center onClick={onToggle} width="50px">
       {isOpen ? (
