@@ -1,10 +1,9 @@
 import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
-import { Container } from "@chakra-ui/layout";
+import { Center, Container, HStack, Text } from "@chakra-ui/layout";
 import {
   Collapse,
   Flex,
   IconButton,
-  Text,
   useColorModeValue,
   useDisclosure,
 } from "@chakra-ui/react";
@@ -21,7 +20,7 @@ import { MobileNav } from "./Nav/MobileNav";
 
 export default function Header() {
   const { isOpen, onToggle } = useDisclosure();
-  const isMinWidth768 = useMediaQuery("(min-width:768px)");
+  const isMinWidth992 = useMediaQuery("(min-width:992px)");
 
   const hambergerRendered = (
     <IconButton
@@ -32,27 +31,28 @@ export default function Header() {
     />
   );
 
-  if (!isMinWidth768) {
+  if (!isMinWidth992) {
     return (
       <MobileHeaderContainer isOpen={isOpen}>
-        <Text color={useColorModeValue("gray.800", "white")}>Logo</Text>
+        <Logo />
         {hambergerRendered}
       </MobileHeaderContainer>
     );
   } else {
     return (
-      <HeaderContainer>
+      <DesktopHeaderContainer>
         <Flex
           flex={{ base: 1 }}
           justify={{ base: "center", md: "start" }}
           justifyContent="space-between"
+          alignItems="center"
         >
-          <Text color={useColorModeValue("gray.800", "white")}>Logo</Text>
+          <Logo />
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
             <DesktopNav />
           </Flex>
         </Flex>
-      </HeaderContainer>
+      </DesktopHeaderContainer>
     );
   }
 }
@@ -62,6 +62,32 @@ export default function Header() {
 //##############            MODULES             ########################
 //######################################################################
 //######################################################################
+
+function Logo() {
+  return (
+    <HStack spacing="12px">
+      <Center
+        bgColor="purple.900"
+        w="38px"
+        h="38px"
+        borderRadius="sm"
+        boxShadow="-5px 10px 30px 0 rgba(96,1,211,0.3)"
+      >
+        <Text fontSize="20px" fontWeight="bold" color="white">
+          L
+        </Text>
+      </Center>
+      <Text
+        color="black"
+        fontSize={{ base: "27px", md: "30px" }}
+        fontWeight="bold"
+      >
+        Loustrous
+      </Text>
+    </HStack>
+  );
+}
+
 function MobileHeaderContainer({
   children,
   isOpen,
@@ -75,7 +101,6 @@ function MobileHeaderContainer({
         bg="white"
         color={useColorModeValue("gray.600", "white")}
         h="88px"
-        py={{ base: 2 }}
         align={"center"}
         justifyContent="space-between"
       >
@@ -88,14 +113,13 @@ function MobileHeaderContainer({
   );
 }
 
-function HeaderContainer({ children }: { children: ReactNode }) {
+function DesktopHeaderContainer({ children }: { children: ReactNode }) {
   return (
-    <Container maxW="container.2xl" h="88px" bgColor="white">
+    <Container maxW="container.2xl" bgColor="white">
       <Flex
         bg="white"
         color={useColorModeValue("gray.600", "white")}
         h="88px"
-        py={{ base: 2 }}
         align={"center"}
       >
         {children}

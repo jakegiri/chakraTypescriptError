@@ -7,7 +7,7 @@ export interface NavItem {
 
 export const NAV_ITEMS: Array<NavItem> = [
   {
-    label: "Inspiration",
+    label: "Home",
     children: [
       {
         label: "Explore Design Work",
@@ -22,7 +22,7 @@ export const NAV_ITEMS: Array<NavItem> = [
     ],
   },
   {
-    label: "Find Work",
+    label: "Services",
     children: [
       {
         label: "Job Board",
@@ -37,7 +37,7 @@ export const NAV_ITEMS: Array<NavItem> = [
     ],
   },
   {
-    label: "Learn Design",
+    label: "Blog",
     href: "#",
   },
   {

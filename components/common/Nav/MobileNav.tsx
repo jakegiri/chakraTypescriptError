@@ -5,12 +5,17 @@ import { Flex, Link, Stack, Text } from "@chakra-ui/layout";
 import { Collapse } from "@chakra-ui/transition";
 import { NavItem, NAV_ITEMS } from "./Config";
 
+//#############################################################
+//#############################################################
+//                  MAIN
+//#############################################################
+//#############################################################
 export const MobileNav = () => {
   return (
     <Stack
       bg={useColorModeValue("white", "gray.800")}
       p={4}
-      display={{ md: "none" }}
+      display={{ lg: "none" }}
     >
       {NAV_ITEMS.map((navItem) => (
         <MobileNavItem key={navItem.label} {...navItem} />
@@ -19,6 +24,11 @@ export const MobileNav = () => {
   );
 };
 
+//#############################################################
+//#############################################################
+//                  MODULES
+//#############################################################
+//#############################################################
 const MobileNavItem = ({ label, children, href }: NavItem) => {
   const { isOpen, onToggle } = useDisclosure();
 

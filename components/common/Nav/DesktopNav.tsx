@@ -18,7 +18,7 @@ export const DesktopNav = () => {
           <Popover trigger={"hover"} placement={"bottom-start"}>
             <PopoverTrigger>
               <Link
-                p={2}
+                px="22px"
                 href={navItem.href ?? "#"}
                 fontWeight={500}
                 color={linkColor}
