@@ -1,7 +1,11 @@
-import { Center } from "@chakra-ui/layout";
+import HeroSection from "../components/home/HeroSection";
 
 const Home = () => {
-  return <Center mt="100px">body</Center>;
+  return (
+    <>
+      <HeroSection />
+    </>
+  );
 };
 
 export default Home;

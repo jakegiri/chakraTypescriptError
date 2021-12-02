@@ -4,7 +4,7 @@ export const heading = {
     fontWeight: "bold",
   },
   sizes: {
-    xs: { fontSize: "lg", lineHeight: "30px" }, //
+    xs: { fontSize: "lg", lineHeight: "30px" },
     sm: { fontSize: "xl", lineHeight: "40px" },
     md: { fontSize: "2xl", lineHeight: "45px" },
     lg: { fontSize: "3xl", lineHeight: "47px" },
