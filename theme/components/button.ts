@@ -4,6 +4,7 @@ export const button = {
     color: "white",
     fontSize: "lg",
     fontWeight: "medium",
+    maxWidth: "220px",
   },
   variants: {
     brandPrimary: {

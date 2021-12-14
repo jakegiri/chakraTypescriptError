@@ -1,6 +1,6 @@
 export const heading = {
   baseStyle: {
-    fontFamily: "Nunito",
+    fontFamily: "Roboto",
     fontWeight: "bold",
   },
   sizes: {

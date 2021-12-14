@@ -8,6 +8,7 @@ import {
 import Image from "next/image";
 import { ReactNode } from "react";
 import useMediaQuery from "../../../lib/hooks/useMediaQuery";
+import Container1 from "../Container1";
 import closeIcon from "../Icons/close.svg";
 import hamburgerIcon from "../Icons/hamburger.svg";
 import { DesktopNav } from "./Nav/DesktopNav";
@@ -99,9 +100,12 @@ function MobileHeaderContainer({
   isOpen: boolean;
 }) {
   return (
-    <Container maxW="container.2xl" h="88px" bgColor="white">
+    <Container
+      maxW="container.2xl"
+      h="88px"
+      bgColor={{ base: "gray.50", md: "white" }}
+    >
       <Flex
-        bg="white"
         color={useColorModeValue("gray.600", "white")}
         h="88px"
         align={"center"}
@@ -118,15 +122,14 @@ function MobileHeaderContainer({
 
 function DesktopHeaderContainer({ children }: { children: ReactNode }) {
   return (
-    <Container maxW="container.2xl" bgColor="white">
+    <Container1>
       <Flex
-        bg="white"
         color={useColorModeValue("gray.600", "white")}
         h="88px"
         align={"center"}
       >
         {children}
       </Flex>
-    </Container>
+    </Container1>
   );
 }
