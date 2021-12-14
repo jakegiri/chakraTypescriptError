@@ -5,7 +5,7 @@ import "@fontsource/roboto/700.css"; // for heading
 import type { AppProps } from "next/app";
 import Layout from "../components/common/Layout";
 import "../styles/globals.css";
-import "../styles/swiper.css";
+import "../styles/swiper.scss";
 import theme from "../theme";
 
 function MyApp({ Component, pageProps }: AppProps) {
