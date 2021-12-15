@@ -26,7 +26,11 @@ export function WhyChooseUs() {
           </Text>
           <Description />
         </Box>
-        <Box alignItems="stretch" display={{ base: "none", "2xl": "block" }}>
+        <Box
+          width="100%"
+          alignItems="stretch"
+          display={{ base: "none", "2xl": "block" }}
+        >
           <ImageSection />
         </Box>
       </Flex>
