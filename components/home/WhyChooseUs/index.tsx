@@ -1,19 +1,15 @@
 import { Box, Flex, Text } from "@chakra-ui/react";
-import Container1 from "../../common/Container1";
+import LContainer from "../../common/Containers";
 import Description from "./Description";
 import Headline from "./Headline";
 import ImageSection from "./Image";
 
 export function WhyChooseUs() {
   return (
-    <Container1
-      pt={{ base: "126px", md: "206px" }}
-      pb={{ base: "124px", "2xl": "271px" }}
-      bgImage={{
-        base: "linear-gradient(to bottom, white , #F3F4F6 200px)",
-        md: "none",
-      }}
-      bgColor={{ md: "gray.50" }}
+    <LContainer
+      bg="gray"
+      // pt={{ base: "126px", md: "206px" }}
+      // pb={{ base: "124px", "2xl": "271px" }}
     >
       <Flex>
         <Box>
@@ -34,6 +30,6 @@ export function WhyChooseUs() {
           <ImageSection />
         </Box>
       </Flex>
-    </Container1>
+    </LContainer>
   );
 }

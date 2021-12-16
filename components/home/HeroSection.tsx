@@ -6,11 +6,13 @@ import { useRef } from "react";
 import useMediaQuery from "../../lib/hooks/useMediaQuery";
 import heroImage1 from "../../public/heroImage1.png";
 import heroImage2 from "../../public/heroImage2.png";
-import Container1 from "../common/Container1";
+import LContainer from "../common/Containers";
 
 export default function HeroSection() {
+  const isMinWidth768px = useMediaQuery("(min-width: 768px)");
+
   return (
-    <Container1 bgColor={{ base: "gray.50", md: "white" }}>
+    <LContainer noPadding bg={!isMinWidth768px && "gray"}>
       <Flex
         h="calc(100vh - 88px)"
         flexDirection={{ base: "column", md: "row" }}
@@ -18,7 +20,7 @@ export default function HeroSection() {
         <ContentRedered />
         <ImageRendered />
       </Flex>
-    </Container1>
+    </LContainer>
   );
 }
 

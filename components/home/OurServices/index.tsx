@@ -1,6 +1,6 @@
 import { Heading, Text, useBreakpointValue, VStack } from "@chakra-ui/react";
 import useMediaQuery from "../../../lib/hooks/useMediaQuery";
-import Container1 from "../../common/Container1";
+import LContainer from "../../common/Containers";
 import { default as CardsForLargeScreen } from "./CardsForLargeScreen";
 import CardsForSmallScreen from "./CardsForSmallScreen";
 
@@ -16,10 +16,10 @@ export default function OurServices() {
   );
 
   return (
-    <Container1
-      pt={{ base: "124px", md: "200px" }}
-      pb={{ base: "154px", md: "0" }}
-      bgColor="gray.50"
+    <LContainer
+      bg="gray"
+      // pt={{ base: "124px", md: "200px" }}
+      // pb={{ base: "154px", md: "0" }}
     >
       <VStack spacing={{ base: "96px", md: "73px" }} width="100%">
         <Heading size={headingSize}>
@@ -30,6 +30,6 @@ export default function OurServices() {
         </Heading>
         {cardsRendered}
       </VStack>
-    </Container1>
+    </LContainer>
   );
 }
