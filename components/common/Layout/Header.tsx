@@ -1,14 +1,15 @@
-import { Center, Container, HStack, Text } from "@chakra-ui/layout";
+import { Center, HStack, Text } from "@chakra-ui/layout";
 import {
   Collapse,
   Flex,
+  useBreakpointValue,
   useColorModeValue,
   useDisclosure,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import { ReactNode } from "react";
 import useMediaQuery from "../../../lib/hooks/useMediaQuery";
-import ContainerDefault from "../Containers";
+import LContainer from "../Containers";
 import closeIcon from "../Icons/close.svg";
 import hamburgerIcon from "../Icons/hamburger.svg";
 import { DesktopNav } from "./Nav/DesktopNav";
@@ -99,12 +100,9 @@ function MobileHeaderContainer({
   children: ReactNode;
   isOpen: boolean;
 }) {
+  const containerPadding = useBreakpointValue({ base: "gray", md: null });
   return (
-    <Container
-      maxW="container.2xl"
-      h="88px"
-      bgColor={{ base: "gray.50", md: "white" }}
-    >
+    <LContainer noPadding h="88px" bg={containerPadding}>
       <Flex
         color={useColorModeValue("gray.600", "white")}
         h="88px"
@@ -116,13 +114,13 @@ function MobileHeaderContainer({
       <Collapse in={isOpen} animateOpacity>
         <MobileNav />
       </Collapse>
-    </Container>
+    </LContainer>
   );
 }
 
 function DesktopHeaderContainer({ children }: { children: ReactNode }) {
   return (
-    <ContainerDefault noPadding>
+    <LContainer noPadding>
       <Flex
         color={useColorModeValue("gray.600", "white")}
         h="88px"
@@ -130,6 +128,6 @@ function DesktopHeaderContainer({ children }: { children: ReactNode }) {
       >
         {children}
       </Flex>
-    </ContainerDefault>
+    </LContainer>
   );
 }

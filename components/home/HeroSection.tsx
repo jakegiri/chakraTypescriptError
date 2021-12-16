@@ -9,10 +9,10 @@ import heroImage2 from "../../public/heroImage2.png";
 import LContainer from "../common/Containers";
 
 export default function HeroSection() {
-  const isMinWidth768px = useMediaQuery("(min-width: 768px)");
+  const containerPadding = useBreakpointValue({ base: "gray", md: "null" });
 
   return (
-    <LContainer noPadding bg={!isMinWidth768px && "gray"}>
+    <LContainer noPadding bg={containerPadding}>
       <Flex
         h="calc(100vh - 88px)"
         flexDirection={{ base: "column", md: "row" }}
