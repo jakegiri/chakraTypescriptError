@@ -42,7 +42,7 @@ function Card({ data }: { data: Data }) {
 
   return (
     <Flex width="800px" bgColor="white" borderRadius="lg">
-      <Box width="380px" flexShrink="0" borderRadius="20px" overflow="hidden">
+      <Box width="320px" flexShrink="0" borderRadius="20px" overflow="hidden">
         {imageRendered}
       </Box>
       <Box p="58px 90px 68px 60px">
