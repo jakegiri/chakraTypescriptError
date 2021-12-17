@@ -1,16 +1,31 @@
-import { Box, Button, Heading, Text, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Flex,
+  Heading,
+  HStack,
+  Text,
+  useBreakpointValue,
+  VStack,
+} from "@chakra-ui/react";
+import Image from "next/image";
+import useMediaQuery from "../../../lib/hooks/useMediaQuery";
+import blogImage1 from "../../../public/blogs/blogimage1.png";
 import LContainer from "../../common/ui/Containers/LContainers";
 
 export default function CheckOurArticles() {
+  const isMinWidth992 = useMediaQuery("(min-width: 992px)");
+  const headingSize = useBreakpointValue({ md: "2xl" });
+
   return (
     <LContainer bg="grayGradient" centerContent>
-      <Heading mb="120px">
+      <Heading mb="120px" size={headingSize}>
         <Text color="pink.900" display="inline">
           CHECK{" "}
         </Text>
         OUR ARTICLES
       </Heading>
-      <CardsForSmallScreen />
+      {!isMinWidth992 ? <CardsForSmallScreen /> : <CardsForLargeScreen />}
       <Button variant="brandSecondary" mt="126px" boxShadow="mdPink">
         Check All Blogs
       </Button>
@@ -38,6 +53,32 @@ function CardsForSmallScreen() {
         </Box>
       ))}
     </VStack>
+  );
+}
+
+function CardsForLargeScreen() {
+  const imageRendered = (
+    <Box position="relative" width="100%" height="100%">
+      <Image src={blogImage1} layout="fill" objectFit="cover" />
+    </Box>
+  );
+
+  return (
+    <HStack spacing="40px">
+      {featuredBlogsCards.map(({ heading, text, date }) => (
+        <Flex width="800px" bgColor="white" borderRadius="lg">
+          <Box width="380px" borderRadius="lg" flexShrink="0">
+            {imageRendered}
+          </Box>
+          <Box p="58px 70px 68px 60px">
+            <Text>{date}</Text>
+            <Heading mt="23px">{heading}</Heading>
+            <Text mt="28px">{text}</Text>
+            <Button mt="36px">Read More</Button>
+          </Box>
+        </Flex>
+      ))}
+    </HStack>
   );
 }
 
