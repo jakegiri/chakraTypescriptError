@@ -4,6 +4,8 @@ export default function LContainer({
   children,
   bg,
   noPadding,
+  noTopPadding,
+  noBottomPadding,
   ...restProps
 }: any) {
   // backgound properties
@@ -21,7 +23,11 @@ export default function LContainer({
   }
 
   //padding properties
-  const padding = !noPadding && { base: "124px 20px", lg: "170px 50px" };
+  let padding = !noPadding && { base: "124px 20px", lg: "170px 50px" };
+  if (noTopPadding)
+    padding = { base: "0 20px 124px 20px", lg: "0 50px 170px 50px" };
+  if (noBottomPadding)
+    padding = { base: "124px 20px 0 20px", lg: "170px 50px 0 50px" };
 
   return (
     <Box {...bgProps}>

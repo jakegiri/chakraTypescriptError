@@ -6,11 +6,7 @@ import ImageSection from "./Image";
 
 export function WhyChooseUs() {
   return (
-    <LContainer
-      bg="gray"
-      // pt={{ base: "126px", md: "206px" }}
-      // pb={{ base: "124px", "2xl": "271px" }}
-    >
+    <LContainer bg="gray" noTopPadding>
       <Flex>
         <Box>
           <Headline />
