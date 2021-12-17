@@ -53,7 +53,7 @@ export function Card({ children, ...restProps }: any) {
       width={{ base: "100%", md: "100%" }}
       py={{ base: "42px", md: "65px" }}
       bgColor="white"
-      minWidth="341px"
+      minWidth="320px"
       maxWidth="387px"
       borderRadius="md"
       border="1px solid #BDCEDF"
