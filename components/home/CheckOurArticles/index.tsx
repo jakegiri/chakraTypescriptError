@@ -18,7 +18,7 @@ export default function CheckOurArticles() {
           OUR ARTICLES
         </Heading>
         <CardsForSmallScreen />
-        <Button variant="pinkOutline" mt="110px" boxShadow="xxxsPink">
+        <Button variant="pinkOutline" mt="100px" boxShadow="xxxsPink">
           Check All Blogs
         </Button>
       </LContainer>
