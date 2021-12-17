@@ -23,11 +23,11 @@ export default function LContainer({
   }
 
   //padding properties
-  let padding = !noPadding && { base: "124px 20px", lg: "170px 50px" };
+  let padding = !noPadding && { base: "170px 20px", lg: "170px 50px" };
   if (noTopPadding)
-    padding = { base: "0 20px 124px 20px", lg: "0 50px 170px 50px" };
+    padding = { base: "0 20px 170px 20px", lg: "0 50px 170px 50px" };
   if (noBottomPadding)
-    padding = { base: "124px 20px 0 20px", lg: "170px 50px 0 50px" };
+    padding = { base: "170px 20px 0 20px", lg: "170px 50px 0 50px" };
 
   return (
     <Box {...bgProps}>

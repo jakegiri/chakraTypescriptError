@@ -3,14 +3,17 @@ import LContainer from "../../common/ui/Containers/LContainers";
 
 export default function CheckOurArticles() {
   return (
-    <LContainer bg="grayGradient">
-      <Heading textAlign="center" mb="120px">
+    <LContainer bg="grayGradient" centerContent>
+      <Heading mb="120px">
         <Text color="pink.900" display="inline">
           CHECK{" "}
         </Text>
         OUR ARTICLES
       </Heading>
       <CardsForSmallScreen />
+      <Button variant="brandSecondary" mt="126px" boxShadow="mdPink">
+        Check All Blogs
+      </Button>
     </LContainer>
   );
 }
@@ -24,9 +27,10 @@ function CardsForSmallScreen() {
           border="1px solid #BDCEDF"
           bgColor="white"
           borderRadius="lg"
+          boxShadow="0 20px 38px rgba(20, 107, 255, 0.1)"
         >
           <Text mb="29px">{date}</Text>
-          <Heading mb="29px" size="xs">
+          <Heading mb="29px" size="sm">
             {heading}
           </Heading>
           <Text mb="38px">{text}</Text>
