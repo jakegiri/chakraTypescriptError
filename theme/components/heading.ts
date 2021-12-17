@@ -15,3 +15,23 @@ export const heading = {
   },
   defaultProps: { size: "md" },
 };
+
+/*
+
+
+  return (
+    <LContainer bg="grayGradient" centerContent>
+      <Heading mb="50px" size={headingSize}>
+        <Text color="pink.900" display="inline">
+          CHECK{" "}
+        </Text>
+        OUR ARTICLES
+      </Heading>
+      <Button bgColor="none" mb="126px" borderColor="mdPink" borderWidth="2px">
+        CHECK ALL BLOGS
+      </Button>
+      {!isMinWidth992 ? <CardsForSmallScreen /> : <CardsForLargeScreen />}
+    </LContainer>
+  );
+
+*/

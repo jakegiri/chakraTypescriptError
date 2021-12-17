@@ -15,6 +15,18 @@ export const button = {
       borderRadius: "lg",
       bgColor: "pink.900",
     },
+    pinkOutline: {
+      borderRadius: "7px",
+      borderWidth: "2px",
+      borderColor: "pink.900",
+      color: "pink.900",
+    },
+    purpleOutline: {
+      // borderRadius: "7px",
+      borderWidth: "2px",
+      borderColor: "purple.900",
+      color: "purple.900",
+    },
   },
   sizes: {
     sm: { px: "30px", py: "12px", h: "auto" },

@@ -1,5 +1,6 @@
 export const shadows = {
   // PINK
+  xxxsPink: "1px 10px 18px 0 rgba(253,52,110, 0.2)",
   xxsPink: "-10px 15px 30px 0 rgba(253,52,110, 0.3)",
   xsPink: "-5px 15px 30px 0 rgba(253,52,110, 0.3)",
   smPink: "-10px 20px 40px 0 rgba(253,52,110, 0.3)",
