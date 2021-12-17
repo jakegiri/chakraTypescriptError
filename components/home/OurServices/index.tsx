@@ -1,6 +1,6 @@
 import { Heading, Text, useBreakpointValue, VStack } from "@chakra-ui/react";
 import useMediaQuery from "../../../lib/hooks/useMediaQuery";
-import LContainer from "../../common/Containers";
+import LContainer from "../../common/ui/Containers/LContainers";
 import { default as CardsForLargeScreen } from "./CardsForLargeScreen";
 import CardsForSmallScreen from "./CardsForSmallScreen";
 

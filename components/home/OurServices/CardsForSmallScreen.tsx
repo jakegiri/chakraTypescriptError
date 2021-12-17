@@ -5,8 +5,8 @@ import {
   Flex,
   Heading,
   IconButton,
-  Stack,
   Text,
+  VStack,
 } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { icons, services } from "./config";
@@ -14,12 +14,7 @@ import IconContainerRound from "./IconContainerRound";
 
 export default function CardsForSmallScreen() {
   return (
-    <Stack
-      width="100%"
-      direction={{ base: "column", md: "row" }}
-      spacing={{ base: "70px", md: "28px" }}
-      justifyContent="center"
-    >
+    <VStack width="100%" spacing="70px" justifyContent="center">
       {services.map(({ heading, ui, description }, index) => (
         <Card key={heading}>
           <IconContainerRound
@@ -35,7 +30,9 @@ export default function CardsForSmallScreen() {
             </Box>
           </IconContainerRound>
           <Heading mt={{ base: "30px", md: "48px" }}>{heading}</Heading>
-          <Text mt="30px">{description}</Text>
+          <Text mt="30px" textAlign="center">
+            {description}
+          </Text>
           <IconButton
             aria-label="Read More"
             icon={<ArrowForwardIcon color="purple.900" />}
@@ -46,7 +43,7 @@ export default function CardsForSmallScreen() {
           ></IconButton>
         </Card>
       ))}
-    </Stack>
+    </VStack>
   );
 }
 

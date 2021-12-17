@@ -9,9 +9,9 @@ import {
 import Image from "next/image";
 import { ReactNode } from "react";
 import useMediaQuery from "../../../lib/hooks/useMediaQuery";
-import LContainer from "../Containers";
 import closeIcon from "../Icons/close.svg";
 import hamburgerIcon from "../Icons/hamburger.svg";
+import LContainer from "../ui/Containers/LContainers";
 import { DesktopNav } from "./Nav/DesktopNav";
 import { MobileNav } from "./Nav/MobileNav";
 

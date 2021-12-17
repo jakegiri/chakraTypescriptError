@@ -1,5 +1,5 @@
 import { Box, Flex, Text } from "@chakra-ui/react";
-import LContainer from "../../common/Containers";
+import LContainer from "../../common/ui/Containers/LContainers";
 import Description from "./Description";
 import Headline from "./Headline";
 import ImageSection from "./Image";

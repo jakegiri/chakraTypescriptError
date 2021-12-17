@@ -1,28 +1,39 @@
-import { Box, Center, Heading, HStack, Text } from "@chakra-ui/react";
-import LContainer from "../../common/Containers";
+import { Box, Button, Heading, Text, VStack } from "@chakra-ui/react";
+import LContainer from "../../common/ui/Containers/LContainers";
 
 export default function CheckOurArticles() {
   return (
     <LContainer bg="grayGradient">
-      <Center>
-        <Heading>
-          <Text color="pink.900" display="inline">
-            Check{" "}
-          </Text>
-          Our Articles
-        </Heading>
-      </Center>
+      <Heading textAlign="center" mb="120px">
+        <Text color="pink.900" display="inline">
+          CHECK{" "}
+        </Text>
+        OUR ARTICLES
+      </Heading>
+      <CardsForSmallScreen />
     </LContainer>
   );
 }
 
 function CardsForSmallScreen() {
   return (
-    <HStack spacing="50px">
-      <Box p="50px 39px 56px 39px">
-        <Heading></Heading>
-      </Box>
-    </HStack>
+    <VStack spacing="50px">
+      {featuredBlogsCards.map(({ heading, text, date }) => (
+        <Box
+          p="50px 40px 56px 40px"
+          border="1px solid #BDCEDF"
+          bgColor="white"
+          borderRadius="lg"
+        >
+          <Text mb="29px">{date}</Text>
+          <Heading mb="29px" size="xs">
+            {heading}
+          </Heading>
+          <Text mb="38px">{text}</Text>
+          <Button variant="brandSecondary">Read More</Button>
+        </Box>
+      ))}
+    </VStack>
   );
 }
 

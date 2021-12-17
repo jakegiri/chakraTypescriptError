@@ -6,7 +6,7 @@ import { useRef } from "react";
 import useMediaQuery from "../../lib/hooks/useMediaQuery";
 import heroImage1 from "../../public/heroImage1.png";
 import heroImage2 from "../../public/heroImage2.png";
-import LContainer from "../common/Containers";
+import LContainer from "../common/ui/Containers/LContainers";
 
 export default function HeroSection() {
   const containerPadding = useBreakpointValue({ base: "gray", md: "null" });
