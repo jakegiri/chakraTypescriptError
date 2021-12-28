@@ -1,4 +1,5 @@
 import CheckOurArticles from "../components/home/CheckOurArticles";
+import DontBeConfused from "../components/home/DontBeConfused";
 import HeroSection from "../components/home/HeroSection";
 import OurServices from "../components/home/OurServices";
 import { WhyChooseUs } from "../components/home/WhyChooseUs";
@@ -25,6 +26,7 @@ const Home = () => {
       <OurServices />
       <WhyChooseUs />
       <CheckOurArticles />
+      <DontBeConfused />
     </>
   );
 };

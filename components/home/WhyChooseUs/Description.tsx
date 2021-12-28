@@ -1,5 +1,6 @@
 import { EmailIcon } from "@chakra-ui/icons";
 import { Box, Center, Flex, Heading, Text, VStack } from "@chakra-ui/layout";
+import { useBreakpointValue } from "@chakra-ui/react";
 
 const attributes = [
   {
@@ -20,6 +21,7 @@ const attributes = [
 ];
 
 export default function Description() {
+  const listHeadingSize = useBreakpointValue({ base: "xs", md: "md" });
   return (
     <VStack
       spacing={{ base: "22px", md: "58px" }}
@@ -31,7 +33,7 @@ export default function Description() {
         <Flex key={index}>
           <Icon />
           <Box pl={{ base: "18px", md: "30px" }}>
-            <Heading fontSize={{ base: 20, md: "25" }}>{heading}</Heading>
+            <Heading size={listHeadingSize}>{heading}</Heading>
             <Text textAlign="left">{description}</Text>
           </Box>
         </Flex>

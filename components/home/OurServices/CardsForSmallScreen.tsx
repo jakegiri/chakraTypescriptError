@@ -16,7 +16,7 @@ export default function CardsForSmallScreen() {
   return (
     <VStack width="100%" spacing="70px" justifyContent="center">
       {services.map(({ heading, ui, description }, index) => (
-        <Card key={heading}>
+        <Card key={index}>
           <IconContainerRound
             bgColor={icons[index].color}
             boxShadow={icons[index].boxShadow}

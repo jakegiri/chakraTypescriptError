@@ -3,13 +3,14 @@ import { Box, Button, Heading, Text, VStack } from "@chakra-ui/react";
 export function CardsForSmallScreen() {
   return (
     <VStack spacing="50px">
-      {featuredBlogsCards.map(({ heading, text, date }) => (
+      {featuredBlogsCards.map(({ heading, text, date }, index) => (
         <Box
           p="50px 40px 56px 40px"
           border="1px solid #BDCEDF"
           bgColor="white"
           borderRadius="lg"
           boxShadow="0 20px 38px rgba(20, 107, 255, 0.1)"
+          key={index}
         >
           <Text mb="29px">{date}</Text>
           <Heading mb="29px" size="sm">

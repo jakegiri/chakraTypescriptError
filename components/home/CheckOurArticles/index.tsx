@@ -6,7 +6,7 @@ import LContainer from "../../common/ui/Containers/LContainers";
 import CardsForLargeScreen from "./CardsForLargeScreen";
 import { CardsForSmallScreen } from "./CardsForSmallScreen";
 
-export default function CheckOurArticles() {
+export default function CheckOurArticles(): JSX.Element {
   const isMinWidth992 = useMediaQuery("(min-width: 992px)");
   const headingSize = useBreakpointValue({ md: "2xl" });
   const { loading, error, data } = useQuery(GET_ALL_POSTS, {
@@ -16,10 +16,11 @@ export default function CheckOurArticles() {
     },
   });
 
-  if (loading) return "loading";
-  if (error) return "Error";
+  if (loading) return <p>loading</p>;
+  if (error) return <p>Error</p>;
 
   console.log(data);
+
   if (!isMinWidth992) {
     return (
       <LContainer bg="grayGradient" centerContent>

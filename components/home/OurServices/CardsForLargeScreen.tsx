@@ -31,7 +31,11 @@ export default function CardsForLargeScreen({ children, ...restProps }: any) {
       className="swiper mySwipper"
     >
       {services.map((service, index) => (
-        <SwiperSlide style={swiperSlideStyles} className={"swiper-slide"}>
+        <SwiperSlide
+          style={swiperSlideStyles}
+          className={"swiper-slide"}
+          key={index}
+        >
           <Card {...service} index={index} />
         </SwiperSlide>
       ))}

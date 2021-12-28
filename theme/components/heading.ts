@@ -4,10 +4,11 @@ export const heading = {
     fontWeight: "bold",
   },
   sizes: {
-    xs: { fontSize: "lg", lineHeight: "30px" },
+    xs: { fontSize: "lg", lineHeight: "32px" },
     sm: { fontSize: "xl", lineHeight: "40px" },
     md: { fontSize: "2xl", lineHeight: "45px" },
     lg: { fontSize: "3xl", lineHeight: "47px" },
+    "35size": { fontSize: "35px", lineHeight: "40px" },
     xl: { fontSize: "4xl", lineHeight: "55px" },
     "2xl": { fontSize: "5xl", lineHeight: "65px" },
     "3xl": { fontSize: "6xl", lineHeight: "80px" },
@@ -15,23 +16,3 @@ export const heading = {
   },
   defaultProps: { size: "md" },
 };
-
-/*
-
-
-  return (
-    <LContainer bg="grayGradient" centerContent>
-      <Heading mb="50px" size={headingSize}>
-        <Text color="pink.900" display="inline">
-          CHECK{" "}
-        </Text>
-        OUR ARTICLES
-      </Heading>
-      <Button bgColor="none" mb="126px" borderColor="mdPink" borderWidth="2px">
-        CHECK ALL BLOGS
-      </Button>
-      {!isMinWidth992 ? <CardsForSmallScreen /> : <CardsForLargeScreen />}
-    </LContainer>
-  );
-
-*/

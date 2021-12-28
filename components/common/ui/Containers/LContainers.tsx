@@ -16,9 +16,11 @@ export default function LContainer({
       break;
     case "grayGradient":
       bgProps = {
-        bgImage: "linear-gradient(to bottom, white , #F3F4F6 200px)",
+        backgroundImage: "linear-gradient(to bottom, white , #F3F4F6 200px)",
       };
+      break;
     default:
+      bgProps = { bgColor: bg };
       break;
   }
 
