@@ -1,4 +1,5 @@
-import { Box, Flex } from "@chakra-ui/react";
+import { Box, Center, Flex } from "@chakra-ui/react";
+import NewsAndUpdateVSmall from "../../common/CTA/NewsAndUpdatesVSmall";
 import { LContainer } from "../../common/ui/Containers";
 import Header from "./Header";
 import ListDetails from "./ListDetails";
@@ -16,9 +17,9 @@ export default function DontBeConfused(): JSX.Element {
         >
           <ListDetails />
         </Box>
-        {/* <Box width="100%" bgColor="white" mt={{ base: "95px", md: "136px" }}>
-          CTA
-        </Box> */}
+        <Center width="100%" mt={{ base: "95px", md: "136px" }}>
+          <NewsAndUpdateVSmall />
+        </Center>
       </Flex>
     </LContainer>
   );
