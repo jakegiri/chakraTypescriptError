@@ -10,6 +10,7 @@ export const heading = {
     lg: { fontSize: "3xl", lineHeight: "47px" },
     "35size": { fontSize: "35px", lineHeight: "40px" },
     xl: { fontSize: "4xl", lineHeight: "55px" },
+    "45size": { fontSize: "45px", lineHeight: "60" },
     "2xl": { fontSize: "5xl", lineHeight: "65px" },
     "3xl": { fontSize: "6xl", lineHeight: "80px" },
     "4xl": { fontSize: "7xl", lineHeight: "95px" },

@@ -31,7 +31,7 @@ const InputStyle = styled.input`
   }
 `;
 
-export default function NewsAndUpdateVSmall() {
+export default function CTANewsAndUpdatesVSmall() {
   return (
     <Center
       padding="66px 18px 61px 18px"
