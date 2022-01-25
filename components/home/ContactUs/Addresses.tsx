@@ -1,11 +1,4 @@
-import {
-  Box,
-  Center,
-  Flex,
-  Heading,
-  Text,
-  useBreakpointValue,
-} from "@chakra-ui/react";
+import { Box, Center, Flex, Heading, Text } from "@chakra-ui/react";
 import {
   faEnvelope,
   faMapMarkerAlt,
@@ -17,8 +10,6 @@ import { ReactNode } from "react";
 //##################################################################
 //##################################################################
 export default function Addresses() {
-  const iconBg = useBreakpointValue<"purple">({ xl: "purple" });
-
   return (
     <Flex
       flexDirection={{ base: "column", lg: "row" }}
@@ -35,7 +26,7 @@ export default function Addresses() {
         </AddressContainer>
       </Box>
       <Box flex="1" flexBasis={{ lg: "297px" }}>
-        <AddressContainer icon={faPhoneAlt} heading="Our Phone" iconBg={iconBg}>
+        <AddressContainer icon={faPhoneAlt} heading="Our Phone">
           <Text>
             <span style={{ whiteSpace: "nowrap" }}>+91 690-160-7548</span>
             <br />

@@ -33,7 +33,7 @@ export const DesktopNav = () => {
 
             {navItem.children && (
               <PopoverContent
-                border={0}
+                // border={0}
                 boxShadow={"xl"}
                 bg={popoverContentBgColor}
                 p={4}
@@ -71,8 +71,9 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
         <Box>
           <Text
             transition={"all .3s ease"}
-            _groupHover={{ color: "pink.400" }}
+            _groupHover={{ color: "pink.500" }}
             fontWeight={500}
+            color="#9555E1"
           >
             {label}
           </Text>

@@ -1,16 +1,80 @@
-.blogContent {
-  padding: 64px 128px;
-}
+/*##############################################
+            HEADING
+##############################################*/
 
-.blogContent h3 {
-  font-family: "Nunito";
-  font-size: 35px;
+.blogContent h3,
+.blogContent h4,
+.blogContent h5 {
+  font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir,
+    "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial,
+    sans-serif;
   font-weight: 700;
+}
+.blogContent h3 {
+  font-size: 36px;
   margin-top: 54px;
   margin-bottom: 18px;
+  line-height: 45px;
+}
+.blogContent h4 {
+  font-size: 30px;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+.blogContent h5 {
+  font-size: 20px;
+  margin-top: 32px;
+  margin-bottom: 15px;
 }
 
+/*##############################################
+            OVERVIEW (Blockquote)
+##############################################*/
+.blogContent blockquote {
+  font-size: 1.2em;
+  font-style: italic;
+  border: 4px solid currentColor;
+  padding: 1em 0 0 2.5em;
+  margin: 0 0 1.6em;
+  position: relative;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  line-height: 1.6;
+  background-color: #ede2fa;
+}
+
+.blogContent blockquote p {
+  color: #263238;
+  margin-bottom: 20px;
+}
+/*##############################################
+            PARAGRAPHS (general paragraphs)
+##############################################*/
 .blogContent p {
-  font-size: 18px;
+  font-size: 20px;
   line-height: 32px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #263238;
+  margin-bottom: 32px;
+}
+
+/*##############################################
+            TABLE OF CONTENTS (Lists)
+##############################################*/
+.blogContent li {
+  margin-left: 40px;
+}
+
+.blogContent li p {
+  font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir,
+    "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial,
+    sans-serif;
+  margin-bottom: 0;
+  font-size: 16px;
+}
+
+.blogContent li > ul > li {
+  list-style-type: circle;
+}
+.blogContent li > ul > li > p {
+  line-height: 25px;
 }

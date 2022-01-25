@@ -25,13 +25,18 @@ export const NAV_ITEMS: Array<NavItem> = [
     label: "Services",
     children: [
       {
-        label: "Job Board",
-        subLabel: "Find your dream design job",
+        label: "Web Development",
+        subLabel: "Performance with latest tech in industry",
         href: "#",
       },
       {
-        label: "Freelance Projects",
-        subLabel: "An exclusive list for contract work",
+        label: "Content Writing",
+        subLabel: "Engaging content with power words",
+        href: "#",
+      },
+      {
+        label: "Graphics Desinging",
+        subLabel: "",
         href: "#",
       },
     ],

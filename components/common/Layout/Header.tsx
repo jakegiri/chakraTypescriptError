@@ -83,6 +83,7 @@ function Logo() {
         </Text>
       </Center>
       <Text
+        as="h1"
         color="black"
         fontSize={{ base: "27px", md: "30px" }}
         fontWeight="bold"

@@ -11,27 +11,35 @@ export default function Blogs() {
   const { loading, error, data } = useQuery(GET_ALL_POSTS, {
     variables: { skip: 0, limit: 5 },
   });
-  const headingHeight = useBreakpointValue({ md: "xl" });
+  const headingHeight = useBreakpointValue({ md: "35size" });
 
   if (loading) return <p>Loading</p>;
-
-  console.log(data);
 
   return (
     <LContainer as="article" bg="gray" noPadding centerContent={true}>
       <Flex flexDirection="column" alignItems="center" maxWidth="936px">
-        <Heading as="h2" size={headingHeight} py="64px">
-          IOT Market Worth $8.8 Billion in 2017
+        <Heading
+          as="h2"
+          size={headingHeight}
+          py="64px"
+          mx={{ base: "16px", md: "0" }}
+        >
+          {data.blogPostCollection.items[0].title}
         </Heading>
         <Box bgColor="white">
           <Box>
             <Image src={blogBanner1} layout="intrinsic"></Image>
           </Box>
-          <div className={styles.blogContent}>
-            {documentToReactComponents(
-              data.blogPostCollection.items[0].content.json
-            )}
-          </div>
+          <Box
+            padding={{ base: "64px 30px", md: "64px 128px" }}
+            width={{ base: "100vw", md: "auto" }}
+          >
+            <div className={styles.blogContent}>
+              {documentToReactComponents(
+                data.blogPostCollection.items[0].content.json
+              )}
+            </div>
+          </Box>
         </Box>
       </Flex>
     </LContainer>
