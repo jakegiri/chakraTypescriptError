@@ -12,6 +12,7 @@ export const heading = {
     xl: { fontSize: "4xl", lineHeight: "55px" },
     "45size": { fontSize: "45px", lineHeight: "60" },
     "2xl": { fontSize: "5xl", lineHeight: "65px" },
+    "60size": { fontSize: "60px", lineHeight: "73px" },
     "3xl": { fontSize: "6xl", lineHeight: "80px" },
     "4xl": { fontSize: "7xl", lineHeight: "95px" },
   },

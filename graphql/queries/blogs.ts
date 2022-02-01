@@ -9,6 +9,20 @@ export const GET_ALL_POSTS = gql`
         description
         content {
           json
+          links {
+            assets {
+              block {
+                sys {
+                  id
+                }
+                url
+                title
+                width
+                height
+                description
+              }
+            }
+          }
         }
       }
     }

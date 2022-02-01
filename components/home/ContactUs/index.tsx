@@ -10,12 +10,14 @@ export default function ContactUs() {
   return (
     <LContainer bg="gray">
       <Flex flexWrap="wrap">
+        {/*### CONTENT ####*/}
         <Box
           width={{ base: "100%", lg: "50%" }}
           pr={{ lg: "5.6%", xl: "7%", "2xl": "9.4%", "3xl": "9.8%" }}
         >
           <Content />
         </Box>
+        {/*### MAP ####*/}
         <Box
           width={{ base: "100%", lg: "50%" }}
           display={{ base: "none", lg: "block" }}
@@ -26,6 +28,7 @@ export default function ContactUs() {
             <Map borderRadius="20px" />
           </PopupComponent>
         </Box>
+        {/*### ADDRESS ####*/}
         <Box flex="1" pt={{ base: "150px", lg: "130px" }}>
           <Addresses />
         </Box>

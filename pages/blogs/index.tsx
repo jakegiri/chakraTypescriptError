@@ -4,6 +4,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import Image from "next/image";
 import { LContainer } from "../../components/common/ui/Containers";
 import { GET_ALL_POSTS } from "../../graphql/queries/blogs";
+import renderOptionsForLinkedAssets from "../../lib/contentful/renderOptionsForLinkedAssets";
 import blogBanner1 from "../../public/blogBanner1.jpg";
 import styles from "./blog.module.css";
 
@@ -14,7 +15,7 @@ export default function Blogs() {
   const headingHeight = useBreakpointValue({ md: "35size" });
 
   if (loading) return <p>Loading</p>;
-
+  console.log(data.blogPostCollection);
   return (
     <LContainer as="article" bg="gray" noPadding centerContent={true}>
       <Flex flexDirection="column" alignItems="center" maxWidth="936px">
@@ -36,7 +37,10 @@ export default function Blogs() {
           >
             <div className={styles.blogContent}>
               {documentToReactComponents(
-                data.blogPostCollection.items[0].content.json
+                data.blogPostCollection.items[0].content.json,
+                renderOptionsForLinkedAssets(
+                  data.blogPostCollection.items[0].content.links
+                )
               )}
             </div>
           </Box>

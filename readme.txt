@@ -1,3 +1,8 @@
+//######################################################
+//######################################################
+                SCREEN SIZES
+//######################################################
+//######################################################
 base			sm:			  md:			  lg:			xl:			  2xl:
 
 0			    480px			768px			992			1280			1740
@@ -7,15 +12,21 @@ base			sm:			  md:			  lg:			xl:			  2xl:
 lg				          3xl			  4xl			3xl			  4xl
 
 
-================================
-================================
+//######################################################
+//######################################################
+                REMAINING
+//######################################################
+//######################################################
 
-remaining 
-  responsive button sizes
-  hero Image small screen
+- hover effect
+    - buttons,
+    - cards
+- some animation
+    - inside hero Image
+    - scrolling animation
+- home pagination sections
+    - container size ==set== full screen width size
 
-Console log errors
 
-  --Image with src "/_next/static/media/heroImage2.723cdc04.svg" and "layout='fill'" has unused properties assigned. Please remove "width" and "height".
 
   
