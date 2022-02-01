@@ -8,8 +8,20 @@ interface Props {
 export default function Footer({ withCTABanner = false }: Props) {
   return (
     <LContainer>
-      <p>{withCTABanner && <StartYourProject />}</p>
-      {/* <p>Footerrr</p> */}
+      {withCTABanner && <StartYourProject />}
+      <p>Footerrr</p>
     </LContainer>
   );
 }
+
+//###########################################################
+//###########################################################
+//##########           SUBCOMPONENTS           ##############
+//###########################################################
+//###########################################################
+
+// const ContentForSmScreen = () => {
+//   return (
+
+//   );
+// }

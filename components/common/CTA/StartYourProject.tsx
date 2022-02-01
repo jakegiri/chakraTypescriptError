@@ -27,8 +27,8 @@ export default function () {
       }}
     >
       <Text
-        fontSize={{ base: "13px", md: "sm" }}
-        p={{ base: "1px 24px 1px 24px", md: "4px 29px 6px 29px" }}
+        fontSize={{ base: "13px", md: "14" }}
+        p={{ base: "1px 24px 1px 24px", md: "2px 29px 2px 29px" }}
         bgColor="yellow"
         color="gray.500"
         borderRadius="lg"

@@ -1,4 +1,4 @@
-import { Center, HStack, Text } from "@chakra-ui/layout";
+import { Center } from "@chakra-ui/layout";
 import {
   Collapse,
   Flex,
@@ -7,9 +7,9 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import Image from "next/image";
-import Link from "next/link";
 import { ReactNode } from "react";
 import useMediaQuery from "../../../lib/hooks/useMediaQuery";
+import Logo from "../../Icebox/Logo";
 import closeIcon from "../Icons/close.svg";
 import hamburgerIcon from "../Icons/hamburger.svg";
 import LContainer from "../ui/Containers/LContainers";
@@ -71,36 +71,6 @@ export default function Header() {
 //##############            MODULES             ########################
 //######################################################################
 //######################################################################
-
-function Logo() {
-  return (
-    <Link href="/">
-      <a>
-        <HStack spacing="12px">
-          <Center
-            bgColor="purple.900"
-            w="38px"
-            h="38px"
-            borderRadius="sm"
-            boxShadow="-5px 10px 30px 0 rgba(96,1,211,0.3)"
-          >
-            <Text fontSize="20px" fontWeight="bold" color="white">
-              L
-            </Text>
-          </Center>
-          <Text
-            as="h1"
-            color="black"
-            fontSize={{ base: "27px", md: "30px" }}
-            fontWeight="bold"
-          >
-            Loustrous
-          </Text>
-        </HStack>
-      </a>
-    </Link>
-  );
-}
 
 function MobileHeaderContainer({
   children,
