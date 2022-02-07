@@ -6,6 +6,7 @@ export default function LContainer({
   noPadding,
   noTopPadding,
   noBottomPadding,
+  position,
   ...restProps
 }: any) {
   // backgound properties
@@ -32,7 +33,7 @@ export default function LContainer({
     padding = { base: "170px 20px 0 20px", lg: "170px 50px 0 50px" };
 
   return (
-    <Box {...bgProps}>
+    <Box {...bgProps} position={position}>
       <Container maxW="container.2xl" p={padding} {...restProps}>
         {children}
       </Container>

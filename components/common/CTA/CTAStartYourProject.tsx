@@ -6,7 +6,7 @@ import {
   useBreakpointValue,
 } from "@chakra-ui/react";
 
-export default function () {
+export default function CTAStartYourProject() {
   const headingSize = useBreakpointValue({
     base: "35size",
     md: "2xl",

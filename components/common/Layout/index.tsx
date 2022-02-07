@@ -1,4 +1,3 @@
-import { Container } from "@chakra-ui/layout";
 import { ReactNode } from "react";
 import Footer from "./Footer";
 import Header from "./Header";
@@ -13,9 +12,7 @@ export default function Layout({ children, urlPathName }: Props) {
     <>
       <Header />
       {children}
-      <Container maxW="container.2xl">
-        <Footer withCTABanner={urlPathName === "/"} />
-      </Container>
+      <Footer withCTABanner={urlPathName === "/"} />
     </>
   );
 }
