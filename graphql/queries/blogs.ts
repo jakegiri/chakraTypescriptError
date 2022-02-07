@@ -28,3 +28,5 @@ export const GET_ALL_POSTS = gql`
     }
   }
 `;
+
+// export const GET_POST_BY_ID
