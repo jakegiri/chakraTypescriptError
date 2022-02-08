@@ -5,6 +5,7 @@ import {
   Text,
   useBreakpointValue,
 } from "@chakra-ui/react";
+import CTABannerBg from "../../../assets/images/CTABannerBg.svg";
 
 export default function CTAStartYourProject() {
   const headingSize = useBreakpointValue({
@@ -25,6 +26,8 @@ export default function CTAStartYourProject() {
         lg: "106px 0 83px 0",
         xl: "183px 0 156px 0",
       }}
+      bgImage={CTABannerBg}
+      backgroundSize="cover"
     >
       <Text
         fontSize={{ base: "13px", md: "14" }}

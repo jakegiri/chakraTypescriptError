@@ -1,7 +1,11 @@
 import { Center, HStack, Text } from "@chakra-ui/react";
 import Link from "next/link";
 
-export default function Logo() {
+interface Props {
+  color?: "white" | "blue";
+}
+
+export default function Logo({ color }: Props) {
   return (
     <Link href="/">
       <a>
@@ -18,8 +22,7 @@ export default function Logo() {
             </Text>
           </Center>
           <Text
-            as="h1"
-            color="black"
+            color={color || "black"}
             fontSize={{ base: "27px", md: "30px" }}
             fontWeight="bold"
           >
